@@ -2,54 +2,60 @@
 
 HOWTO Root Telenor TG799VAC Xtream > 18.1
 
-## Why root?
+## Varför root?
 
-If you dont want to have backdoors in your router.
-You want to make changes you cant do otherwise. 
+Du vill inte ha några bakdörrar i din router.
+Du vill kunna göra inställningar som inte annars går pga minimal "hemsida"
 
-## Under development!
+## Under konstruktion!
 
 
 
 ## Start
 
-**This is for routers having version > 18.1**
+**Detta är för version > 18.1**
 
-~~If you have version 17.1 go **here!**~~
+~~Om du har version 17.1 gå **hit!**~~
 
-~~If you have version 15.4 go **here!**~~
+~~Om du har version 15.4 gå **hit!**~~
 
-In order to root Telenor we have to transfer an old rootable firmware. **17.1** 
+Om du ska kunna roota routern måste vi lägga in en äldre programvara. **17.1** 
 
 ## Setup TFTP
 
-First download TFTP in order to transfer rootable firmware.
+Först ladda ner TFTP så vi kan överföra programvaran.
 Download https://bitbucket.org/phjounin/tftpd64/downloads/Tftpd64-4.64-setup.exe
 
-RBI: https://github.com/Vargaskri/Root-Technicolor-TG799VAC-Xtream-Telenor/blob/master/RBI/
+Mjukvara: https://github.com/Vargaskri/Root-Technicolor-TG799VAC-Xtream-Telenor/blob/master/RBI/TN_SWE_TG799vacXtream_17.1.7937-1281014-20180313133921-Official.rbi.torrent
 
-Put the RBI in root folder of TFTP
+Lägg filen i rooten i TFTP mappen.
 
-Run it as Admininstrator! Make changes as shown in pictures. TFTP can be a pain sometimes. 
+Kör TFTP som Administratör. Ändra inställninar som bilderna visar. TFTP kan ibland vara bråkig men bör gå bra. 
 
 ![T F T P Settings](images/TFTPSettings.png)
 
 ![T F T P Settings2](images/TFTPSettings2.png)
 
-1. Have the router switched off.
-1. Put an ethernet cable in ETH1 on the router 
-1. Take a paperclip or something small and hold in the reset button. Turn on the router and wait until ETH led starts blinking and power light is Orange.
-1. If everything done right TFTP should now transfer the RBI to the router.
-1. Let the router boot up and login on webpage and se if you have version **17.1**
-    1. If you have continue **here**
-    1. If not we have to switch loaded bank.
+1. Ha routern avslagen.
+1. Sätt in en nätverkskabel i port 1 på routern och i dator.
+1. Ta ett gem eller nåt att hålla in resetknappen med medans du slår igång routern. Håll in gemet tills ethernetlampan börjar blinka.
+1. Nu borde TFTP före över mjukvaran i routern om allt går som de ska.
+1. Låt routern få starta upp, logga in och kolla om du har version **17.1**
+    1. Om du har det fortsätt **här**
+    1. Om **INTE** måste vi byta bootad bank.
 
 
-## Change booted bank!
+## Byta bootad bank!
 
-This is how i change banks. 
-Take your cellphone or something with an timer.
-1. Turn on the router and start the timer (30secs). 
-2. After 30 secs push the power button fast(off, on) If done right all lights should lit up. Otherwise the time could be wrong.
-3. Reset timer and wait 30 seconds more then fast (off, on) again. Leds lit up.
-4. 30 secs again fast (off,on) then let the router boot. Now you should have **17.1**  booted.
+Såhär byter jag mellan bank_1 och 2.  
+Starta ett tidtagarur på datorn eller mobil.
+1. Slå på routern och tidtagaruret. 
+2. Efter 30 sekunder tryck snabbt på strömknappen (av, på) Om du gjorde rätt kommer alla lampor på routern lysa upp lite svagt sen startar routern om.
+3. Starta om tidtagaruret och efter 30 sekunder slå av och routern fort igen. Gör samma sak en gång till därefter låt routern starta upp. Då bör du ha bootat **17.1**
+
+
+## Själva root delen.
+
+Nu när du har 17.1 ska du använda:
+
+https://github.com/BoLaMN/tch-exploit/releases
