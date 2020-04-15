@@ -6,5 +6,6 @@ TFTP
 Download https://bitbucket.org/phjounin/tftpd64/downloads/Tftpd64-4.64-setup.exe
 
 Setup
-![](https://github..com/vargaskri/Root-Technicolor-TG799VAC-Xtream-Telenor/images/TFTPSettings.png)
+![](https://github.com/Vargaskri/Root-Technicolor-TG799VAC-Xtream-Telenor/blob/master/images/TFTPSettings.png)
+
  
