@@ -4,6 +4,9 @@ HOWTO Root Telenor TG799VAC Xtream > 18.1
 
 ## Under development!
 
+## Start
+
+In order to root Telenor we have to transfer an old rootable firmware. 
 
 ## Setup TFTP
 
