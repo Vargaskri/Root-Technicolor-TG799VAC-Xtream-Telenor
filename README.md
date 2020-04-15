@@ -2,18 +2,32 @@
 
 HOWTO Root Telenor TG799VAC Xtream > 18.1
 
+## Why root?
+
+If you dont want to have backdoors in your router.
+You want to make changes you cant do otherwise. 
+
 ## Under development!
+
+
 
 ## Start
 
-In order to root Telenor we have to transfer an old rootable firmware. 
+**This is for routers having version > 18.1**
+
+~~If you have version 17.1 go **here!**~~
+
+~~If you have version 15.4 go **here!**~~
+
+In order to root Telenor we have to transfer an old rootable firmware. **17.1** 
 
 ## Setup TFTP
 
 First download TFTP in order to transfer rootable firmware.
 Download https://bitbucket.org/phjounin/tftpd64/downloads/Tftpd64-4.64-setup.exe
 
-RBI: 
+RBI: https://github.com/Vargaskri/Root-Technicolor-TG799VAC-Xtream-Telenor/blob/master/RBI/
+
 Put the RBI in root folder of TFTP
 
 Run it as Admininstrator! Make changes as shown in pictures. TFTP can be a pain sometimes. 
@@ -23,17 +37,17 @@ Run it as Admininstrator! Make changes as shown in pictures. TFTP can be a pain 
 ![T F T P Settings2](images/TFTPSettings2.png)
 
 1. Have the router switched off.
-1. Put an ethernet cable in ETH1 on the router
-1. Take a paperclip or something small and push in the reset button. Turn on the router and wait until ETH led starts blinking and power light is Orange.
+1. Put an ethernet cable in ETH1 on the router 
+1. Take a paperclip or something small and hold in the reset button. Turn on the router and wait until ETH led starts blinking and power light is Orange.
 1. If everything done right TFTP should now transfer the RBI to the router.
 1. Let the router boot up and login on webpage and se if you have version **17.1**
-    1. If you have continue
+    1. If you have continue **here**
     1. If not we have to switch loaded bank.
 
 
 ## Change booted bank!
 
-This is how i change banks.
+This is how i change banks. 
 Take your cellphone or something with an timer.
 1. Turn on the router and start the timer (30secs). 
 2. After 30 secs push the power button fast(off, on) If done right all lights should lit up. Otherwise the time could be wrong.
