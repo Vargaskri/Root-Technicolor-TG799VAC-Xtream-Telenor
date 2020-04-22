@@ -1,6 +1,8 @@
 # Root Technicolor TG799VAC-Xtream Telenor
 
-HOWTO Root Telenor TG799VAC Xtream > 18.1
+Guide till Root Telenor TG799VAC Xtream > 18.1
+
+Ska försöka göra guiden så lätt som möjlig men lite förkunskaper krävs. 
 
 ## Varför root?
 
@@ -56,6 +58,13 @@ Starta ett tidtagarur på datorn eller mobil.
 
 ## Själva root delen.
 
-Nu när du har 17.1 ska du använda:
+Nu när du har 17.1 skall du använda:
 
 https://github.com/BoLaMN/tch-exploit/releases
+
+Under Linux:
+./tch-exploit 
+
+Under Windows:
+
+Öppna en kommandotolk som Administratör.
